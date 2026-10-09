@@ -1,0 +1,122 @@
+# theme = "zed_onedark"
+# theme = "flexoki_dark"
+theme = "jetbrains_dark"
+
+[editor]
+# tab-width = 4
+scrolloff = 3
+mouse = true
+middle-click-paste = false
+scroll-lines = 3
+shell = ["sh", "-c"]
+line-number = "relative"
+cursorline = true
+auto-completion = true
+auto-format = true
+auto-pairs = false
+idle-timeout = 500
+completion-trigger-len = 3
+auto-info = true
+true-color = true
+#rulers = []
+color-modes = true
+# gutters = ["line-numbers"]
+
+
+[editor.lsp]
+enable = true
+display-messages = true
+display-inlay-hints = false
+auto-signature-help = true
+display-signature-help-docs = true
+
+
+[editor.cursor-shape]
+normal = "block"
+insert = "bar"
+select = "underline"
+
+
+[editor.file-picker]
+hidden = false
+parents = true
+ignore = true
+git-ignore = true
+git-global = true
+git-exclude = true
+max-depth = 3
+
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+
+# [editor.auto-pairs]
+# '(' = ')'
+# '{' = '}'
+# '[' = ']'
+# '"' = '"'
+# '`' = '`'
+# "'" = "'"
+# #'<' = '>'
+
+[editor.whitespace]
+render = "none"
+
+[editor.whitespace.characters]
+# space = "·"
+# nbsp = "⍽"
+# nnbsp = "␣"
+# tab = "→"
+tab = "·"
+# newline = "⏎"
+tabpad = "·" # Tabs will look like "→···" (depending on tab width)
+
+
+
+[editor.indent-guides]
+render = true
+character = "╎"
+
+[editor.inline-diagnostics]
+cursor-line = "hint"
+
+ 
+[keys.normal]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+
+H = ":buffer-previous"
+L = ":buffer-next"
+C-q = ":buffer-close"
+C-h = "jump_view_left"
+C-l = "jump_view_right"
+C-j = "jump_view_down"
+C-k = "jump_view_up"
+
+V = ["goto_first_nonwhitespace", "extend_to_line_end"]
+D = ["ensure_selections_forward", "extend_to_line_end"]
+x = "extend_line"
+
+[keys.select]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
+
+";" = ["collapse_selection", "normal_mode"]
+
+# Same behaviour as normal mode x
+x = "extend_line"
+
+# Counterpart for normal mode V
+V = "extend_to_line_end"
+
+[keys.insert]
+up = "no_op"
+down = "no_op"
+left = "no_op"
+right = "no_op"
